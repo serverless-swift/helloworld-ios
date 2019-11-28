@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7pM-wQ-brU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenWhiskStarterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7I-TQ-eun">
+                                <rect key="frame" x="44" y="572" width="326" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iCm-OZ-XaR">
+                                <rect key="frame" x="40" y="193" width="334" height="371"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="371" id="z92-Ro-Ttb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEd-V5-YHp" customClass="WhiskButton">
+                                <rect key="frame" x="151" y="118" width="112" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Tap me"/>
+                                <connections>
+                                    <action selector="whiskButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvA-Ie-uvP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="M7I-TQ-eun" secondAttribute="trailing" constant="24" id="0Cq-2Z-PG1"/>
+                            <constraint firstItem="iCm-OZ-XaR" firstAttribute="top" secondItem="QEd-V5-YHp" secondAttribute="bottom" constant="20" id="31V-NP-8Qo"/>
+                            <constraint firstItem="QEd-V5-YHp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="6QQ-Gz-nfc"/>
+                            <constraint firstItem="QEd-V5-YHp" firstAttribute="centerY" secondItem="iCm-OZ-XaR" secondAttribute="centerY" id="7QR-JG-CYl"/>
+                            <constraint firstItem="QEd-V5-YHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KtS-rV-Kmj"/>
+                            <constraint firstItem="M7I-TQ-eun" firstAttribute="top" secondItem="iCm-OZ-XaR" secondAttribute="bottom" constant="8" symbolic="YES" id="OdF-Vl-7EV"/>
+                            <constraint firstItem="iCm-OZ-XaR" firstAttribute="centerX" secondItem="QEd-V5-YHp" secondAttribute="centerX" id="P8K-Ph-v6a"/>
+                            <constraint firstItem="QEd-V5-YHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XL5-t1-dN2"/>
+                            <constraint firstItem="M7I-TQ-eun" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="lc9-QT-Pah"/>
+                            <constraint firstItem="iCm-OZ-XaR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="pPu-2v-qpY"/>
+                            <constraint firstItem="QEd-V5-YHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zv3-B3-2tt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7QR-JG-CYl"/>
+                                <exclude reference="KtS-rV-Kmj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="RoW-lt-SEL"/>
+                    <connections>
+                        <outlet property="outputText" destination="iCm-OZ-XaR" id="5A5-9Z-aLH"/>
+                        <outlet property="statusLabel" destination="M7I-TQ-eun" id="xJo-lq-c6P"/>
+                        <outlet property="whiskButton" destination="QEd-V5-YHp" id="quL-BS-Cr5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="111"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P46-ta-yXN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7pM-wQ-brU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W7d-5T-VE6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bcl-fM-S5A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKf-sT-tsf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="111"/>
+        </scene>
+    </scenes>
+</document>
